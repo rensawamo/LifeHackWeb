@@ -10,7 +10,7 @@ node_modules/
 # .env file
 .env
 
-.html
+*.html
 # OS files
 .DS_Store
 Thumbs.db
