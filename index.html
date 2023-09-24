@@ -21,7 +21,7 @@
             .text("Please write everything down")
             .css("color", "red");
         } else {
-          $.post("send_mail", { message: messageValue })
+          $.post("/send_mail", { message: messageValue })
             .done(function () {
               $(".errorSubmit")
                 .text("Thanks for your message!!!")

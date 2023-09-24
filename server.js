@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.post("send_mail", async (req, res) => {
+app.post("/send_mail", async (req, res) => {
   const { message } = req.body;
 
   let transporter = nodemailer.createTransport({
@@ -35,6 +35,6 @@ app.post("send_mail", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log("Server started on http://localhost:3000");
+app.listen(5500, () => {
+  console.log("Server started on http://localhost:5500");
 });
