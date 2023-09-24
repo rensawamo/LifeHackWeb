@@ -1,0 +1,119 @@
+.main_wrap {
+  margin: 0 auto;
+}
+
+body {
+  background: #eedcd5;
+  margin: 0;
+}
+
+.home_img {
+  width: 250px;
+}
+
+.part1warp {
+  display: flex;
+  margin-top: 35px;
+  justify-content: center;
+  align-items: center;
+}
+
+.part2warp {
+  display: flex;
+  margin-top: 35px;
+  justify-content: center;
+  align-items: center;
+}
+
+ol li {
+  list-style-type: none;
+  margin: 0 14px;
+}
+ol {
+  padding: 0;
+}
+
+.part2warpImg {
+  width: 190px;
+}
+
+/* コンタクトセクション全体のスタイル */
+#contact {
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+#contact h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#contact p {
+  margin-bottom: 20px;
+}
+
+/* フォーム要素のスタイル */
+#contact label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+  width: 45%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#contact textarea {
+  resize: vertical;
+}
+
+#contact input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#contact input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.titlefont {
+  font-size: 34px;
+  font-weight: bold;
+  color: #3a0606d9;
+  font: bold;
+}
+
+textarea {
+  width: 500px;
+  height: 100px;
+}
+
+input {
+  width: 500px;
+  height: 30px;
+}
+
+.submit-button {
+  background-color: #8b4513;
+  border: none;
+  color: white;
+  /* padding: 6px 44px; */
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-bottom: 20px;
+  height: 40px;
+  width: 117px;
+}
