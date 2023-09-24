@@ -25,12 +25,39 @@ body {
   align-items: center;
 }
 
+ol {
+  padding: 0;
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  ol {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .part1warp {
+    display: block;
+    text-align: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .icondiscription {
+    width: 100%;
+  }
+  .aboutDescription {
+    width: 90%;
+  }
+}
+
+.icondiscription {
+  width: 320px;
+}
+
 ol li {
   list-style-type: none;
   margin: 0 14px;
-}
-ol {
-  padding: 0;
 }
 
 .part2warpImg {
