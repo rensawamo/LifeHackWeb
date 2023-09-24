@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <script>
+    $(document).ready(function () {
+      $(".submit-button").click(function (e) {
+        e.preventDefault();
+        var name = $("#your-name").val();
+        var email = $("#your-email").val();
+        var messageValue = $("#message").val();
+
+        if (name == "" || email == "" || messageValue == "") {
+          $(".errorSubmit")
+            .text("Please write everything down")
+            .css("color", "red");
+        } else {
+          $.post("/send_mail", { message: messageValue })
+            .done(function () {
+              $(".errorSubmit")
+                .text("Thanks for your message!!!")
+                .css("color", "black");
+            })
+            .fail(function () {
+              $(".errorSubmit")
+                .text("Failed to send message. Please try again later.")
+                .css("color", "red");
+            });
+        }
+      });
+    });
+  </script>
+  <body>
+    <h1 class="titlefont" style="text-align: center; font-size: 40px">
+      Life Hack!
+    </h1>
+    <div class="main_wrap">
+      <div id="theme1">
+        <div class="part1warp">
+          <div style="width: 320px">
+            <p style="margin-right: 25px">
+              Reflect on your daily tasks, journals, and readings to improve the
+              quality of your daily life!!!
+            </p>
+          </div>
+          <div>
+            <img src="assets/img/appimage.png" alt="" class="home_img" />
+          </div>
+        </div>
+
+        <div class="part2warp" style="text-align: center">
+          <section id="about" class="wrap">
+            <div class="container">
+              <h2 class="about">
+                <span class="titlefont">About Life Hack</span>
+              </h2>
+
+              <ol class="row" style="display: flex">
+                <li>
+                  <h3>calender</h3>
+                  <figure>
+                    <img
+                      class="part2warpImg"
+                      src="assets/img/homeImg.png"
+                      alt="calender"
+                    />
+                  </figure>
+                  <p>
+                    The calendar allows you to look back on conditions,
+                    completed tasks, and journals.
+                  </p>
+                </li>
+
+                <li>
+                  <h3>work</h3>
+                  <figure>
+                    <img
+                      class="part2warpImg"
+                      src="assets/img/taskImg.png"
+                      alt="calender"
+                    />
+                  </figure>
+                  <div>Drag-and-drop to manage tasks to be done.</div>
+                </li>
+
+                <li>
+                  <h3>book</h3>
+                  <figure>
+                    <img
+                      class="part2warpImg"
+                      src="assets/img/bookDeatilImg.png"
+                      alt="calender"
+                    />
+                  </figure>
+                  <div>
+                    Manage books by category and improve reading effectiveness
+                    by title, content and practice.
+                  </div>
+                </li>
+                <li>
+                  <h3>diary</h3>
+                  <figure>
+                    <img
+                      class="part2warpImg"
+                      src="assets/img/diaryImg.png"
+                      alt="calender"
+                    />
+                  </figure>
+                  <div>
+                    Write a diary with photos and text to record how you are
+                    doing and end the day.
+                  </div>
+                </li>
+                <li>
+                  <h3>graph</h3>
+                  <figure>
+                    <img
+                      class="part2warpImg"
+                      src="assets/img/graphImg.png"
+                      alt="calender"
+                    />
+                  </figure>
+                  <div>
+                    Check the graph to see the percentage of tone and reading
+                    over a given period of time and get clues as to what to do
+                    next.
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="panel_area" style="text-align: center">
+        <div id="pr" class="tab_panel">
+          <h2 class="titlefont">Contact</h2>
+          <p class="errorSubmit"></p>
+          <div
+            action="/contact/#wpcf7-f43-o1"
+            method="post"
+            class="wpcf7-form"
+            novalidate="novalidate"
+          >
+            <div style="display: none">
+              <input type="hidden" name="_wpcf7" value="43" />
+              <input type="hidden" name="_wpcf7_version" value="5.1.4" />
+              <input type="hidden" name="_wpcf7_locale" value="ja" />
+              <input
+                type="hidden"
+                name="_wpcf7_unit_tag"
+                value="wpcf7-f43-o1"
+              />
+              <input type="hidden" name="_wpcf7_container_post" value="0" />
+              <input
+                type="hidden"
+                name="g-recaptcha-response"
+                value="03AFcWeA56qjGS6xaAamltKEYFpmcFflLZ_qMPlaD0Pce6liVKqI_kd_KSN3H3dNtXMzgMdhA3j2DA_VSaQymypsrgC0X_3R4SNoJDAQHepqWfbhH0zhPqeDkDVZs7aiZxPFfZjTJ4a1YgE3jho1eMgIG7JyixQeF4qX47A0QG84sffycGTt7VljjwAHVHLhaLM3rjygum3gHHmf0LsGLlaAbM2V68J1Cws35KwHeTQVDXMDyVuC9tnmk7niuufhGJ2uJxsha_4lhX7KeYNDK5MNDblaAbSxTmvzjid306fpL855VOZAkSrbWlC7uBPMcLgv9k-Nzn2JPhGejpvilJXz3wP4bYAuclArbv-C4dR8kKjGozfTAO9ZP2KJ4ZLJmJ8pjVtpM5PYVOGNc6_6Qo6ON7sFBu0Ki4Vkan47y3ZuKJ-4wzRzpAy_YbC2ajgCfAhGqPbCywiYGEzqoGv5cQpkKz6GCLxdH7h80u35x7e-gcnWzzQv4Yni_9UlyxBQhNcCX7HpkuxGf3Jnnz2eAntsfd05rz62OsdQ"
+              />
+            </div>
+            <p>
+              <label>
+                Name<br />
+                <span class="wpcf7-form-control-wrap your-name"
+                  ><input
+                    type="text"
+                    id="your-name"
+                    name="your-name"
+                    value=""
+                    size="40"
+                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                    aria-required="true"
+                    aria-invalid="false"
+                    placeholder="your mail"
+                /></span>
+              </label>
+            </p>
+            <p>
+              <label>
+                Mail <br />
+                <span class="wpcf7-form-control-wrap your-email"
+                  ><input
+                    type="email"
+                    id="your-email"
+                    name="your-email"
+                    value=""
+                    size="40"
+                    class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                    aria-required="true"
+                    aria-invalid="false"
+                    placeholder="your email"
+                /></span>
+              </label>
+            </p>
+            <p></p>
+            <p>
+              <label>
+                Message<br />
+                <span class="wpcf7-form-control-wrap your-message">
+                  <textarea
+                    id="message"
+                    name="your-message"
+                    cols="40"
+                    rows="10"
+                    class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
+                    aria-required="true"
+                    aria-invalid="false"
+                    placeholder="message"
+                  ></textarea>
+                </span>
+              </label>
+            </p>
+            <p>
+              <button type="submit" value="送信する" class="submit-button">
+                send
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright" style="text-align: center; margin-bottom: 20px">
+      <div class="container">
+        <div class="row">
+          <div class="col col-xs-12 center">
+            Copyright © 2023 rensawamo All rights reserved
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
