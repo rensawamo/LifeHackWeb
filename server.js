@@ -14,14 +14,14 @@ app.post("/send_mail", async (req, res) => {
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.YOUR_EMAIL, // ここを修正
-      pass: process.env.YOUR_PASSWORD, // ここを修正
+      user: process.env.My_EMAIL,
+      pass: process.env.My_PASSWORD,
     },
   });
 
   let mailOptions = {
-    from: process.env.YOUR_EMAIL, // ここを修正
-    to: process.env.YOUR_EMAIL, // ここを修正
+    from: process.env.My_EMAIL,
+    to: process.env.My_EMAIL,
     subject: "New message from contact form",
     text: message,
   };
