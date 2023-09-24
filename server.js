@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.post("/send_mail", async (req, res) => {
+app.post("send_mail", async (req, res) => {
   const { message } = req.body;
 
   let transporter = nodemailer.createTransport({
