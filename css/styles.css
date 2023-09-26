@@ -1,5 +1,6 @@
 .main_wrap {
   margin: 0 auto;
+  width: 95%;
 }
 
 body {
@@ -40,6 +41,7 @@ ol {
   }
   .icondescripition {
     width: 100%;
+    margin: 0 15px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -55,7 +57,7 @@ ol {
   }
   .aboutDescription {
     width: 90%;
-    margin-left: 5%;
+    margin: 0 10px;
   }
 }
 
