@@ -29,10 +29,17 @@ ol {
   padding: 0;
   display: flex;
 }
+.icondescripition {
+  width: 315px;
+}
+
 
 @media screen and (max-width: 768px) {
   ol {
     display: block;
+  }
+  .icondescripition {
+    width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
