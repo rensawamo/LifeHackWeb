@@ -9,13 +9,12 @@ body {
 }
 
 .home_img {
-  width: 250px;
+  width: 200px;
   border-radius: 40px;
 }
 
 .part1warp {
   display: flex;
-  margin-top: 35px;
   justify-content: center;
   align-items: center;
 }
@@ -28,8 +27,8 @@ body {
 }
 
 ol {
-  padding: 0;
-  display: flex;
+  display: flex;         /* Flexbox を使用 */
+  gap: 20px;    
 }
 .icondescripition {
   width: 315px;
