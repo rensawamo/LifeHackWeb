@@ -20,7 +20,6 @@ body {
 }
 
 .appicon {
-  width: 341px;
   margin-right: 37px;margin-bottom: 30px; font-size: large;
 }
 @media screen and (max-width: 768px) {
@@ -52,6 +51,7 @@ ol {
 }
 
 .img-li {
+  margin: 0;
   width: 28%;
 }
 @media screen and (max-width: 768px) {
@@ -192,16 +192,15 @@ input {
 
 .store-badges {
   display: flex;
-  align-items: center; /* 画像を垂直方向の中心に揃える */
-  justify-content: center; /* 画像を水平方向の中心に揃える */
+  align-items: center;
+  justify-content: center;
 }
 
 .store-badge {
-  height: 50px; /* 画像の高さを統一 */
-  margin: 0 10px; /* 画像の間隔を設定 */
+  height: 50px; 
+  margin: 0 10px; 
 }
 
-/* 任意: リンクに対するスタイル */
 .store-badges a {
   display: inline-block;
   text-decoration: none;
@@ -210,31 +209,32 @@ input {
 
 .contact-btn-wrap {
   display: flex;
-  justify-content: center; /* 中央揃え */
+  justify-content: center; 
   align-items: center;
-  height: 100%; /* 親要素に対して高さを全て使う */
+  height: 100%; 
 }
 
 .btn-mail {
-  background-color: #4CAF50; /* 明るい緑色 */
+  height: 25px;
+  background-color: #4CAF50;
   color: white;
   padding: 15px 30px;
   font-size: 16px;
   border: none;
-  border-radius: 25px; /* 丸みを帯びたボタン */
+  border-radius: 25px; 
   text-decoration: none;
   transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn-mail:hover {
-  background-color: #45a049; /* ホバー時の色 */
+  background-color: #45a049; 
 }
 
 .btn-mail .icon {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image: url('email-icon.png'); /* メールアイコンの画像を設定 */
+  background-image: url('email-icon.png'); 
   background-size: cover;
   margin-left: 10px;
   vertical-align: middle;
